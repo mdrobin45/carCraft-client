@@ -10,6 +10,7 @@ import GoogleSignIn from "../../../Components/FormFields/AuthenticationFrom/Form
 
 import FormHeader from "../../../Components/FormFields/AuthenticationFrom/FormHeader/FormHeader";
 import { AuthContext } from "../../../MyContext/AuthContextProvider";
+import SiteTitle from "../../../SiteTitle/SiteTitle";
 
 const Login = () => {
    const { loginWithEmailPassword } = useContext(AuthContext);
@@ -59,6 +60,7 @@ const Login = () => {
    };
    return (
       <>
+         <SiteTitle>Login</SiteTitle>
          <div className="flex flex-col items-center justify-center px-4 md:px-16 py-16">
             <div className="relative pb-6 flex w-full md:w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                <FormHeader heading="Login" />
