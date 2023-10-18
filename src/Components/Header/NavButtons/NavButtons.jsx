@@ -14,7 +14,7 @@ const NavButtons = ({ expandBtnClick }) => {
 
    return (
       <div className="flex relative gap-4 md:gap-0 md:order-2">
-         <Button to="/" btnText="Add Product">
+         <Button to="/add-product" btnText="Add Product">
             <svg
                className="w-4 h-4"
                aria-hidden="true"
