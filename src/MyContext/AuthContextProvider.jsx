@@ -1,3 +1,15 @@
+// import {
+//    GithubAuthProvider,
+//    GoogleAuthProvider,
+//    createUserWithEmailAndPassword,
+//    onAuthStateChanged,
+//    sendEmailVerification,
+//    sendPasswordResetEmail,
+//    signInWithEmailAndPassword,
+//    signInWithPopup,
+//    signOut,
+//    updateProfile,
+// } from "firebase/auth";
 import {
    GithubAuthProvider,
    GoogleAuthProvider,
