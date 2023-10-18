@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
 import { AuthContext } from "../../../MyContext/AuthContextProvider";
+import Button from "../../Buttons/Button";
 import UserDropdown from "./UserDropdown";
 
 const NavButtons = ({ expandBtnClick }) => {
@@ -14,11 +14,9 @@ const NavButtons = ({ expandBtnClick }) => {
 
    return (
       <div className="flex relative gap-4 md:gap-0 md:order-2">
-         <Link
-            to="/add-product"
-            className="inline-flex items-center middle none border-2 border-primary mr-7 hover:bg-black hover:text-white uppercase hover:border-black center mb-2 rounded-lg bg-primary py-1 md:py-2 px-2 md:px-6 font-inter text-md text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+         <Button to="/" btnText="Add Product">
             <svg
-               className="w-4 h-4 mr-2"
+               className="w-4 h-4"
                aria-hidden="true"
                xmlns="http://www.w3.org/2000/svg"
                fill="none"
@@ -31,8 +29,7 @@ const NavButtons = ({ expandBtnClick }) => {
                   d="M10 5.757v8.486M5.757 10h8.486M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                />
             </svg>
-            Add Product
-         </Link>
+         </Button>
          {user && (
             <>
                <img
