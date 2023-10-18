@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import FieldText from "../../Components/FormFields/CarFields/FieldText";
 import PageHeader from "../../Components/PageHeader/PageHeader";
+import SiteTitle from "../../SiteTitle/SiteTitle";
 
 const AddProductForm = () => {
    const [brands, setBrands] = useState([]);
@@ -48,6 +49,7 @@ const AddProductForm = () => {
    };
    return (
       <div>
+         <SiteTitle>Add New Product</SiteTitle>
          <PageHeader title="Add Product" />
          <div className="px-4 md:px-6 lg:px-10">
             <h2 className="text-4xl pt-32 font-bold font-inter text-center">

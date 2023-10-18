@@ -22,7 +22,7 @@ const PopularBrands = () => {
             />
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 pt-10 pb-20">
                {brands.map((brand) => (
-                  <Link to="/" key={brand._id}>
+                  <Link to={`/brand-archive/${brand._id}`} key={brand._id}>
                      <div className="text-center bg-[#F9F9F9] rounded-xl p-2">
                         <img
                            className=" w-40 mx-auto"
