@@ -94,7 +94,7 @@ const UpdateProduct = () => {
          <PageHeader title="Update Product" />
          <div className="px-4 md:px-6 lg:px-10">
             <h2 className="text-4xl pt-32 font-bold font-inter text-center">
-               Add New Product
+               Update Product
             </h2>
             <form
                onSubmit={handleFormSubmit}
@@ -363,7 +363,7 @@ const UpdateProduct = () => {
                <input
                   className="inline-flex mt-4 cursor-pointer items-center gap-2 middle none border-2 border-primary mr-7 hover:bg-black hover:text-white uppercase hover:border-black center mb-2 rounded-lg bg-primary py-1 md:py-2 px-2 md:px-6 font-inter text-md text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="submit"
-                  value="Submit"
+                  value="Update"
                />
             </form>
          </div>
