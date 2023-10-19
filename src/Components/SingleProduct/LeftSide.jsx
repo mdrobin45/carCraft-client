@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { toast } from "react-toastify";
 import { AuthContext } from "../../MyContext/AuthContextProvider";
 import KeyInfo from "./KeyInfo";
 
@@ -10,6 +11,14 @@ const LeftSide = ({ car }) => {
    // Handle add to cart
    const handleAddToCart = () => {
       const carObj = { name, photo, uid, price, quantity: 1 };
+
+      // Custom tost message
+      const toastMsg = toast.loading("");
+      toast.update(toastMsg, {
+         render: "Please wait...",
+         isLoading: true,
+      });
+
       fetch(`${import.meta.env.VITE_SERVER_API}/cart`, {
          method: "POST",
          headers: {
@@ -18,7 +27,23 @@ const LeftSide = ({ car }) => {
          body: JSON.stringify(carObj),
       })
          .then((res) => res.json())
-         .then((data) => console.log(data));
+         .then((data) => {
+            if (data.insertedId) {
+               toast.update(toastMsg, {
+                  render: "Added to Cart",
+                  type: "success",
+                  isLoading: false,
+                  autoClose: 1500,
+               });
+            } else {
+               toast.update(toastMsg, {
+                  render: "Something went wrong!",
+                  type: "error",
+                  isLoading: false,
+                  autoClose: 1500,
+               });
+            }
+         });
    };
    return (
       <div className=" w-2/3 mx-auto my-20">

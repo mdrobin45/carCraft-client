@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import EmptyPage from "../../Components/EmptyPage/EmptyPage";
 import SectionHeader from "../../Components/SectionHeader/SectionHeader";
 import ProductCard from "./ProductCard";
 import SliderTemplate from "./SliderTemplate/SliderTemplate";
@@ -29,7 +30,7 @@ const BrandArchive = () => {
    const filteredCars = cars.filter((car) => car.brand === id);
 
    return (
-      <div>
+      <div className="pb-20">
          <SiteTitle>Brand Archive</SiteTitle>
          {filteredCars.length ? (
             <div>
@@ -55,7 +56,7 @@ const BrandArchive = () => {
                </section>
             </div>
          ) : (
-            "Nod data found"
+            <EmptyPage />
          )}
       </div>
    );

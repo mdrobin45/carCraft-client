@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import FieldText from "../../Components/FormFields/CarFields/FieldText";
 import PageHeader from "../../Components/PageHeader/PageHeader";
 import SiteTitle from "../../SiteTitle/SiteTitle";
@@ -49,6 +50,14 @@ const UpdateProduct = () => {
    // Handle form submit
    const handleFormSubmit = (e) => {
       e.preventDefault();
+
+      // Custom tost message
+      const toastMsg = toast.loading("");
+      toast.update(toastMsg, {
+         render: "Please wait...",
+         isLoading: true,
+      });
+
       fetch(`${import.meta.env.VITE_SERVER_API}/cars/${id}`, {
          method: "PUT",
          headers: {
@@ -57,7 +66,24 @@ const UpdateProduct = () => {
          body: JSON.stringify(formData),
       })
          .then((res) => res.json())
-         .then((data) => console.log(data));
+         .then((data) => {
+            if (data.modifiedCount === 1) {
+               setFormData({});
+               toast.update(toastMsg, {
+                  render: "Product updated",
+                  type: "success",
+                  isLoading: false,
+                  autoClose: 1500,
+               });
+            } else {
+               toast.update(toastMsg, {
+                  render: "Something went wrong!",
+                  type: "error",
+                  isLoading: false,
+                  autoClose: 1500,
+               });
+            }
+         });
    };
    return (
       <div>

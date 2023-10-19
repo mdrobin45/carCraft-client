@@ -8,6 +8,7 @@ import Home from "../Pages/Home/Home";
 import SingleProduct from "../Pages/SingleProduct/SingleProduct";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import Root from "../Root/Root";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
    {
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
          },
          {
             path: "/add-product",
-            element: <AddProductForm />,
+            element: (
+               <PrivateRoute>
+                  <AddProductForm />
+               </PrivateRoute>
+            ),
          },
          {
             path: "/brand-archive/:id",
@@ -37,13 +42,21 @@ const router = createBrowserRouter([
          },
          {
             path: "/single-product/:id",
-            element: <SingleProduct />,
+            element: (
+               <PrivateRoute>
+                  <SingleProduct />
+               </PrivateRoute>
+            ),
             loader: ({ params }) =>
                fetch(`${import.meta.env.VITE_SERVER_API}/cars/${params.id}`),
          },
          {
             path: "/cart",
-            element: <Cart />,
+            element: (
+               <PrivateRoute>
+                  <Cart />
+               </PrivateRoute>
+            ),
             loader: () => fetch(`${import.meta.env.VITE_SERVER_API}/cart`),
          },
          {

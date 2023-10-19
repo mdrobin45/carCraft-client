@@ -5,7 +5,6 @@ import SiteTitle from "../../SiteTitle/SiteTitle";
 
 const SingleProduct = () => {
    const car = useLoaderData();
-   console.log(car);
    return (
       <div className="bg-[#F9F9F9]">
          <SiteTitle>Single Product</SiteTitle>

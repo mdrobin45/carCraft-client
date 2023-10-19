@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import FieldText from "../../Components/FormFields/CarFields/FieldText";
 import PageHeader from "../../Components/PageHeader/PageHeader";
 import SiteTitle from "../../SiteTitle/SiteTitle";
@@ -21,6 +22,25 @@ const AddProductForm = () => {
       description: "",
    });
 
+   // Reset Form
+   const resetForm = () => {
+      setFormData({
+         name: "",
+         brand: "",
+         bodyType: "",
+         condition: "",
+         year: "",
+         price: "",
+         driveType: "",
+         transmission: "",
+         fuelType: "",
+         color: "",
+         photo: "",
+         rating: "",
+         description: "",
+      });
+   };
+
    // Fetch brands
    useEffect(() => {
       fetch(`${import.meta.env.VITE_SERVER_API}/brands`)
@@ -37,6 +57,13 @@ const AddProductForm = () => {
    // Handle form submit
    const handleFormSubmit = (e) => {
       e.preventDefault();
+      // Custom tost message
+      const toastMsg = toast.loading("");
+      toast.update(toastMsg, {
+         render: "Please wait...",
+         isLoading: true,
+      });
+
       fetch(`${import.meta.env.VITE_SERVER_API}/cars`, {
          method: "POST",
          headers: {
@@ -45,7 +72,24 @@ const AddProductForm = () => {
          body: JSON.stringify(formData),
       })
          .then((res) => res.json())
-         .then((data) => console.log(data));
+         .then((data) => {
+            if (data.insertedId) {
+               resetForm();
+               toast.update(toastMsg, {
+                  render: "Product added",
+                  type: "success",
+                  isLoading: false,
+                  autoClose: 1500,
+               });
+            } else {
+               toast.update(toastMsg, {
+                  render: "Something went wrong!",
+                  type: "error",
+                  isLoading: false,
+                  autoClose: 1500,
+               });
+            }
+         });
    };
    return (
       <div>
