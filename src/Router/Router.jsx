@@ -5,6 +5,7 @@ import Register from "../Pages/Authentication/Register/Register";
 import BrandArchive from "../Pages/BrandArchive/BrandArchive";
 import Cart from "../Pages/Cart/Cart";
 import Home from "../Pages/Home/Home";
+import PageNotFound from "../Pages/PageNotFound/PageNotFound";
 import SingleProduct from "../Pages/SingleProduct/SingleProduct";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import Root from "../Root/Root";
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
    {
       path: "/",
       element: <Root />,
+      errorElement: <PageNotFound />,
       children: [
          {
             path: "/",

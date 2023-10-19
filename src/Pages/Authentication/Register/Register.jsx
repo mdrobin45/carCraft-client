@@ -5,10 +5,10 @@ import DisplayError from "../../../Components/FormFields/AuthenticationFrom/Fiel
 import Email from "../../../Components/FormFields/AuthenticationFrom/Fields/Email";
 import Name from "../../../Components/FormFields/AuthenticationFrom/Fields/Name";
 import Password from "../../../Components/FormFields/AuthenticationFrom/Fields/Password";
+import PhotoUrl from "../../../Components/FormFields/AuthenticationFrom/Fields/PhotoUrl";
 import SubmitBtn from "../../../Components/FormFields/AuthenticationFrom/Fields/SubmitBtn";
 import TOS from "../../../Components/FormFields/AuthenticationFrom/Fields/TOS";
 import FormFooter from "../../../Components/FormFields/AuthenticationFrom/FormFooter/FormFooter";
-import GithubSignIn from "../../../Components/FormFields/AuthenticationFrom/FormFooter/SocialSignIn/GithubSignIn";
 import GoogleSignIn from "../../../Components/FormFields/AuthenticationFrom/FormFooter/SocialSignIn/GoogleSignIn";
 import FormHeader from "../../../Components/FormFields/AuthenticationFrom/FormHeader/FormHeader";
 import PageHeader from "../../../Components/PageHeader/PageHeader";
@@ -21,12 +21,12 @@ const Register = () => {
    const { registerWithEmailPassword, profileUpdate } = useContext(AuthContext);
 
    const navigate = useNavigate();
-
    // Form submit
    const handleFormSubmit = (e) => {
       e.preventDefault();
       const name = e.target.name.value;
       const email = e.target.email.value;
+      const photoUrl = e.target.photoUrl.value;
       const password = e.target.password.value;
       const checkBox = e.target.checkbox.checked;
 
@@ -50,6 +50,7 @@ const Register = () => {
             if (result.user) {
                profileUpdate({
                   displayName: name,
+                  photoURL: photoUrl,
                });
                toast.update(toastMsg, {
                   render: "Registration Successful!",
@@ -81,6 +82,7 @@ const Register = () => {
                   <div className="flex flex-col gap-4 p-6">
                      <Name />
                      <Email />
+                     <PhotoUrl />
                      <Password />
                      <TOS />
                      <SubmitBtn btnText="Register" />
@@ -93,7 +95,6 @@ const Register = () => {
                   linkText="Login"
                />
                <GoogleSignIn />
-               <GithubSignIn />
             </div>
          </div>
       </>

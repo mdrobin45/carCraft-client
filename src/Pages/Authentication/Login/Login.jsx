@@ -5,7 +5,6 @@ import Email from "../../../Components/FormFields/AuthenticationFrom/Fields/Emai
 import Password from "../../../Components/FormFields/AuthenticationFrom/Fields/Password";
 import SubmitBtn from "../../../Components/FormFields/AuthenticationFrom/Fields/SubmitBtn";
 import FormFooter from "../../../Components/FormFields/AuthenticationFrom/FormFooter/FormFooter";
-import GithubSignIn from "../../../Components/FormFields/AuthenticationFrom/FormFooter/SocialSignIn/GithubSignIn";
 import GoogleSignIn from "../../../Components/FormFields/AuthenticationFrom/FormFooter/SocialSignIn/GoogleSignIn";
 
 import FormHeader from "../../../Components/FormFields/AuthenticationFrom/FormHeader/FormHeader";
@@ -86,7 +85,6 @@ const Login = () => {
                   linkUrl="/register"
                />
                <GoogleSignIn />
-               <GithubSignIn />
             </div>
          </div>
       </>
