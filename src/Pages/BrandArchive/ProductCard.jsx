@@ -103,7 +103,7 @@ const ProductCard = ({ car }) => {
                Details
             </Link>
             <Link
-               to="/"
+               to={`/update/${_id}`}
                className="inline-flex items-center gap-2 middle none border-2 border-primary hover:bg-black hover:text-white uppercase hover:border-black center mb-2 rounded-lg bg-primary py-1 md:py-2 px-2 md:px-6 font-inter text-md text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                Update
             </Link>

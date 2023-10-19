@@ -6,6 +6,7 @@ import BrandArchive from "../Pages/BrandArchive/BrandArchive";
 import Cart from "../Pages/Cart/Cart";
 import Home from "../Pages/Home/Home";
 import SingleProduct from "../Pages/SingleProduct/SingleProduct";
+import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import Root from "../Root/Root";
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
             path: "/cart",
             element: <Cart />,
             loader: () => fetch(`${import.meta.env.VITE_SERVER_API}/cart`),
+         },
+         {
+            path: "/update/:id",
+            element: <UpdateProduct />,
          },
       ],
    },
