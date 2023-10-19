@@ -95,28 +95,28 @@ const ProductCard = ({ car }) => {
                {name}
             </h4>
             <div className="grid pb-2 grid-cols-1 my-3 md:grid-cols-3 gap-3">
-               <p className="flex items-center gap-2">
-                  <BsCarFront className="text-primary text-xl" />
+               <p className="flex items-center gap-2 text-sm">
+                  <BsCarFront className="text-primary text-md" />
                   {brandName}
                </p>
-               <p className="flex items-center gap-2">
+               <p className="flex items-center gap-2 text-sm">
                   <BsTruckFlatbed className="text-primary text-xl" />
                   {bodyType}
                </p>
-               <p className="flex items-center gap-2">
+               <p className="flex items-center gap-2 text-sm">
                   <RiSteering2Line className="text-primary text-xl" />
                   {driveType}
                </p>
-               <p className="flex items-center gap-2">
-                  <BiTransferAlt className="text-primary text-xl" />
+               <p className="flex items-center gap-2 text-sm">
+                  <BiTransferAlt className="text-primary text-md" />
                   {transmission}
                </p>
-               <p className="flex items-center gap-2">
-                  <BsFuelPumpFill className="text-primary text-xl" />
+               <p className="flex items-center gap-2 text-sm">
+                  <BsFuelPumpFill className="text-primary text-md" />
                   {fuelType}
                </p>
-               <p className="flex items-center gap-2">
-                  <AiOutlineBgColors className="text-primary text-xl" />
+               <p className="flex items-center gap-2 text-sm">
+                  <AiOutlineBgColors className="text-primary text-md" />
                   {color}
                </p>
             </div>

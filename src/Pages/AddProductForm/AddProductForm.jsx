@@ -17,7 +17,10 @@ const AddProductForm = () => {
       transmission: "",
       fuelType: "",
       color: "",
+      mileage: "",
       photo: "",
+      doors: "",
+      cylenders: "",
       rating: "",
       description: "",
    });
@@ -27,13 +30,16 @@ const AddProductForm = () => {
       setFormData({
          name: "",
          brand: "",
+         doors: "",
          bodyType: "",
          condition: "",
          year: "",
+         cylenders: "",
          price: "",
          driveType: "",
          transmission: "",
          fuelType: "",
+         mileage: "",
          color: "",
          photo: "",
          rating: "",
@@ -252,6 +258,24 @@ const AddProductForm = () => {
                         <option value="Petrol">Petrol</option>
                      </select>
                   </div>
+                  <FieldText
+                     onChange={handleOnChange}
+                     value={formData.mileage}
+                     name="mileage"
+                     label="Mileage"
+                     id="mileage"
+                     type="text"
+                     placeholder="Enter Mileage"
+                  />
+                  <FieldText
+                     onChange={handleOnChange}
+                     value={formData.mileage}
+                     name="engineSize"
+                     label="Engine Size (CC)"
+                     id="engineSize"
+                     type="text"
+                     placeholder="Enter Engine Size"
+                  />
                   <div>
                      <label
                         htmlFor="color"
@@ -268,6 +292,42 @@ const AddProductForm = () => {
                         <option value="Red">Red</option>
                         <option value="White">White</option>
                         <option value="Black">Black</option>
+                     </select>
+                  </div>
+                  <div>
+                     <label
+                        htmlFor="color"
+                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Doors
+                     </label>
+                     <select
+                        value={formData.doors}
+                        name="doors"
+                        id="doors"
+                        onChange={handleOnChange}
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option defaultValue="Select brand">Choose</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
+                     </select>
+                  </div>
+                  <div>
+                     <label
+                        htmlFor="color"
+                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Cylenders
+                     </label>
+                     <select
+                        value={formData.cylenders}
+                        name="cylenders"
+                        id="cylenders"
+                        onChange={handleOnChange}
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option defaultValue="Select brand">Choose</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="6">6</option>
                      </select>
                   </div>
                   <div>

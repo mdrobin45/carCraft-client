@@ -1,12 +1,33 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../MyContext/AuthContextProvider";
 import KeyInfo from "./KeyInfo";
 
 const LeftSide = ({ car }) => {
-   const { name, photo, description, price } = car;
+   const [brandName, setBrandName] = useState([]);
+   const {
+      name,
+      photo,
+      description,
+      price,
+      brand,
+      bodyType,
+      condition,
+      year,
+      driveType,
+      transmission,
+      fuelType,
+      color,
+   } = car;
    const { user } = useContext(AuthContext);
    const uid = user.uid;
+
+   // Fetch brand name
+   useEffect(() => {
+      fetch(`${import.meta.env.VITE_SERVER_API}/brands/${brand}`)
+         .then((res) => res.json())
+         .then((data) => setBrandName(data.name));
+   }, [brand]);
 
    // Handle add to cart
    const handleAddToCart = () => {
@@ -67,14 +88,14 @@ const LeftSide = ({ car }) => {
                Key Information
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-               <KeyInfo title="Body Type" text="Coupe" />
-               <KeyInfo title="Body Type" text="Coupe" />
-               <KeyInfo title="Body Type" text="Coupe" />
-               <KeyInfo title="Body Type" text="Coupe" />
-               <KeyInfo title="Body Type" text="Coupe" />
-               <KeyInfo title="Body Type" text="Coupe" />
-               <KeyInfo title="Body Type" text="Coupe" />
-               <KeyInfo title="Body Type" text="Coupe" />
+               <KeyInfo title="Make/Brand" text={brandName} />
+               <KeyInfo title="Body Type" text={bodyType} />
+               <KeyInfo title="Condition" text={condition} />
+               <KeyInfo title="Year" text={year} />
+               <KeyInfo title="Drive Type" text={driveType} />
+               <KeyInfo title="Transmission" text={transmission} />
+               <KeyInfo title="Fuel Type" text={fuelType} />
+               <KeyInfo title="Color" text={color} />
             </div>
          </div>
          <div className="p-4 mt-6 bg-white shadow-md rounded-md px-4 md:px-6 lg:px-10">
