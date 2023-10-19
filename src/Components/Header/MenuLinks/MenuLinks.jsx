@@ -11,7 +11,6 @@ const MenuLinks = ({ mobileExpand }) => {
             <LinkItem to="/" linkText="Home" />
             <LinkItem to="/about" linkText="About" />
             <LinkItem to="/contact" linkText="Contact" />
-            <LinkItem to="/cart" linkText="Cart" />
          </ul>
       </div>
    );

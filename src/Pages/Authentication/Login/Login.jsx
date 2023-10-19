@@ -9,6 +9,7 @@ import GithubSignIn from "../../../Components/FormFields/AuthenticationFrom/Form
 import GoogleSignIn from "../../../Components/FormFields/AuthenticationFrom/FormFooter/SocialSignIn/GoogleSignIn";
 
 import FormHeader from "../../../Components/FormFields/AuthenticationFrom/FormHeader/FormHeader";
+import PageHeader from "../../../Components/PageHeader/PageHeader";
 import { AuthContext } from "../../../MyContext/AuthContextProvider";
 import SiteTitle from "../../../SiteTitle/SiteTitle";
 
@@ -61,6 +62,7 @@ const Login = () => {
    return (
       <>
          <SiteTitle>Login</SiteTitle>
+         <PageHeader title="Login" />
          <div className="flex flex-col items-center justify-center px-4 md:px-16 py-16">
             <div className="relative pb-6 flex w-full md:w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                <FormHeader heading="Login" />

@@ -11,6 +11,7 @@ import FormFooter from "../../../Components/FormFields/AuthenticationFrom/FormFo
 import GithubSignIn from "../../../Components/FormFields/AuthenticationFrom/FormFooter/SocialSignIn/GithubSignIn";
 import GoogleSignIn from "../../../Components/FormFields/AuthenticationFrom/FormFooter/SocialSignIn/GoogleSignIn";
 import FormHeader from "../../../Components/FormFields/AuthenticationFrom/FormHeader/FormHeader";
+import PageHeader from "../../../Components/PageHeader/PageHeader";
 import { AuthContext } from "../../../MyContext/AuthContextProvider";
 import SiteTitle from "../../../SiteTitle/SiteTitle";
 import { formValidation } from "./Validation";
@@ -72,9 +73,10 @@ const Register = () => {
    return (
       <>
          <SiteTitle>Register</SiteTitle>
+         <PageHeader title="Create New Account" />
          <div className="flex flex-col items-center justify-center px-4 md:px-16 py-16">
             <div className="relative pb-6 flex w-full md:w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-               <FormHeader heading="Create New Account" />
+               <FormHeader heading="Register" />
                <form onSubmit={handleFormSubmit}>
                   <div className="flex flex-col gap-4 p-6">
                      <Name />
