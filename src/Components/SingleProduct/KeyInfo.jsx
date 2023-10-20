@@ -7,8 +7,8 @@ const KeyInfo = ({ title, text }) => {
             <BsFillCarFrontFill className="text-primary text-lg mt-1" />
          </div>
          <div>
-            <p className="text-md font-barlow ">{title}</p>
-            <p className="text-md font-semibold font-inter text-black">
+            <p className="text-md font-barlow dark:text-gray-200">{title}</p>
+            <p className="text-md font-semibold dark:text-gray-200 font-inter text-black">
                {text}
             </p>
          </div>

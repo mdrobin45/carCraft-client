@@ -28,7 +28,7 @@ const TOS = () => {
                </span>
             </label>
             <label
-               className="mt-px cursor-pointer select-none font-light text-gray-700"
+               className="mt-px dark:text-gray-200  cursor-pointer select-none font-light text-gray-700"
                htmlFor="checkbox">
                Accept terms and conditions
             </label>

@@ -32,7 +32,7 @@ const ProductCard = ({ car }) => {
       <div
          data-aos="fade-up"
          data-aos-duration="800"
-         className="relative flex w-full md:max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+         className="relative flex w-full md:max-w-[24rem] flex-col rounded-xl bg-white dark:bg-gray-700 bg-clip-border text-gray-700 shadow-md">
          <div className="relative m-0 overflow-hidden rounded-md bg-transparent bg-clip-border text-gray-700 shadow-none">
             <img
                className=" hover:scale-[1.1] transition-all"
@@ -85,9 +85,9 @@ const ProductCard = ({ car }) => {
                         <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
                      </svg>
                   </div>
-                  <p>({rating})</p>
+                  <p className="dark:text-gray-200">({rating})</p>
                </div>
-               <p className="flex items-center gap-1 font-bold text-primary text-xl">
+               <p className="flex dark:text-gray-200 items-center gap-1 font-bold text-primary text-xl">
                   ${price}
                </p>
             </div>
@@ -95,27 +95,27 @@ const ProductCard = ({ car }) => {
                {name}
             </h4>
             <div className="grid pb-2 grid-cols-2 my-3 md:grid-cols-3 gap-3">
-               <p className="flex items-center gap-2 text-sm">
+               <p className="flex items-center gap-2 text-sm dark:text-gray-200">
                   <BsCarFront className="text-primary text-md" />
                   {brandName}
                </p>
-               <p className="flex items-center gap-2 text-sm">
+               <p className="flex items-center gap-2 text-sm dark:text-gray-200">
                   <BsTruckFlatbed className="text-primary text-xl" />
                   {bodyType}
                </p>
-               <p className="flex items-center gap-2 text-sm">
+               <p className="flex items-center gap-2 text-sm dark:text-gray-200">
                   <RiSteering2Line className="text-primary text-xl" />
                   {driveType}
                </p>
-               <p className="flex items-center gap-2 text-sm">
+               <p className="flex items-center gap-2 text-sm dark:text-gray-200">
                   <BiTransferAlt className="text-primary text-md" />
                   {transmission}
                </p>
-               <p className="flex items-center gap-2 text-sm">
+               <p className="flex items-center gap-2 text-sm dark:text-gray-200">
                   <BsFuelPumpFill className="text-primary text-md" />
                   {fuelType}
                </p>
-               <p className="flex items-center gap-2 text-sm">
+               <p className="flex items-center gap-2 text-sm dark:text-gray-200">
                   <AiOutlineBgColors className="text-primary text-md" />
                   {color}
                </p>

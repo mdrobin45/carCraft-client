@@ -1,5 +1,3 @@
-import Button from "../../../Components/Buttons/Button";
-
 const SliderTemplate = ({ ads }) => {
    const { discount, carModel, description, image } = ads;
    return (
@@ -30,43 +28,9 @@ const SliderTemplate = ({ ads }) => {
                <p
                   data-aos="fade-in"
                   data-aos-duration="800"
-                  className="my-4 text-white pr-20">
+                  className="my-4 text-white md:pr-20">
                   {description}
                </p>
-               <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start">
-                  <Button to="/" btnText="Add To Cart" iconPosition="right">
-                     <svg
-                        className="w-4 h-4"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 14 10">
-                        <path
-                           stroke="currentColor"
-                           strokeLinecap="round"
-                           strokeLinejoin="round"
-                           strokeWidth="2"
-                           d="M1 5h12m0 0L9 1m4 4L9 9"
-                        />
-                     </svg>
-                  </Button>
-                  <Button to="/" btnText="View Details" iconPosition="right">
-                     <svg
-                        className="w-4 h-4"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 14 10">
-                        <path
-                           stroke="currentColor"
-                           strokeLinecap="round"
-                           strokeLinejoin="round"
-                           strokeWidth="2"
-                           d="M1 5h12m0 0L9 1m4 4L9 9"
-                        />
-                     </svg>
-                  </Button>
-               </div>
             </div>
 
             <div className="w-full lg:w-2/4">

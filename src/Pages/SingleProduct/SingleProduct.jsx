@@ -6,7 +6,7 @@ import SiteTitle from "../../SiteTitle/SiteTitle";
 const SingleProduct = () => {
    const car = useLoaderData();
    return (
-      <div className="bg-[#F9F9F9]">
+      <div className="bg-[#F9F9F9] dark:bg-black">
          <SiteTitle>Single Product</SiteTitle>
          <PageHeader title="Single Product" />
          <div className="flex px-4 md:px-6 lg:px-10 justify-between">

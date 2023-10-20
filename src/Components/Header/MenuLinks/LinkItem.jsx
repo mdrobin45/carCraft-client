@@ -5,7 +5,7 @@ const LinkItem = ({ to, linkText }) => {
       <li>
          <NavLink
             to={`${to}`}
-            className={`block py-2 pl-3 pr-4 font-barlow hover:text-primary rounded md:bg-transparent md:p-0`}>
+            className={`block py-2 pl-3 pr-4 font-barlow hover:text-primary rounded md:bg-transparent md:p-0 dark:text-white`}>
             {linkText}
          </NavLink>
       </li>

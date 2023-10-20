@@ -50,7 +50,7 @@ const GoogleSignIn = () => {
             loading="lazy"
             alt="google logo"
          />
-         <span>Continue with Google</span>
+         <span className="dark:text-gray-200 ">Continue with Google</span>
       </button>
    );
 };

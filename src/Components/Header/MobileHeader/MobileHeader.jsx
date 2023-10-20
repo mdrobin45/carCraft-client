@@ -1,12 +1,17 @@
 import { useContext, useState } from "react";
+import DarkModeToggle from "react-dark-mode-toggle";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../../MyContext/AuthContextProvider";
+import { DarkContext } from "../../../MyContext/ThemeContextProvider";
+import darkLogo from "../../../assets/images/dark-logo.svg";
+import whiteLogo from "../../../assets/images/white-logo.svg";
 import LinkItem from "../MenuLinks/LinkItem";
 
 const MobileHeader = () => {
    const [showMenu, setShowMenu] = useState(false);
    const { user, logOut } = useContext(AuthContext);
+   const { isDark, setIsDark } = useContext(DarkContext);
 
    // Logout
    const handleLogOut = () => {
@@ -17,13 +22,16 @@ const MobileHeader = () => {
 
    return (
       <>
-         <nav className="relative md:hidden px-4 py-4 flex justify-between items-center bg-white">
-            <Link to="/" className="text-3xl font-bold leading-none">
+         <nav className="relative md:hidden px-4 py-4 flex justify-between items-center bg-white dark:bg-gray-700">
+            <Link to="/" className="flex items-center">
                <img
-                  className="w-52"
-                  src="https://live.themewild.com/motex/assets/img/logo/logo.png"
+                  className="w-12"
+                  src={isDark ? whiteLogo : darkLogo}
                   alt="Logo"
                />
+               <h2 className="text-3xl text-gray-900 font-bold dark:text-white">
+                  Car<span className="text-primary">C</span>raft
+               </h2>
             </Link>
             <div className="lg:hidden">
                <button
@@ -46,17 +54,18 @@ const MobileHeader = () => {
                !showMenu && "hidden"
             }`}>
             <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-            <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
-               <div className="flex items-center mb-8">
-                  <a
-                     className="mr-auto text-3xl font-bold leading-none"
-                     href="#">
+            <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white dark:bg-gray-700 border-r overflow-y-auto">
+               <div className="flex items-center mb-8 justify-between">
+                  <Link to="/" className="flex items-center">
                      <img
-                        className=" w-40"
-                        src="https://live.themewild.com/motex/assets/img/logo/logo.png"
+                        className="w-12"
+                        src={isDark ? whiteLogo : darkLogo}
                         alt="Logo"
                      />
-                  </a>
+                     <h2 className="text-3xl text-gray-900 font-bold dark:text-white">
+                        Car<span className="text-primary">C</span>raft
+                     </h2>
+                  </Link>
                   <button
                      onClick={() => {
                         setShowMenu(!showMenu);
@@ -77,6 +86,11 @@ const MobileHeader = () => {
                   </button>
                </div>
                <div>
+                  <DarkModeToggle
+                     className="mr-4"
+                     onChange={setIsDark}
+                     checked={isDark}
+                  />
                   <ul
                      onClick={() => {
                         setShowMenu(!showMenu);
@@ -113,7 +127,7 @@ const MobileHeader = () => {
                            alt="Bordered avatar"
                         />
                         <div>
-                           <h3 className="font-bold">
+                           <h3 className="font-bold dark:text-gray-200">
                               {user ? user.displayName : "No name"}
                            </h3>
                            <p>{user ? user.email : "example@gmail.com"}</p>

@@ -1,36 +1,28 @@
 import { useContext, useState } from "react";
+import DarkModeToggle from "react-dark-mode-toggle";
 import { AuthContext } from "../../../MyContext/AuthContextProvider";
+import { DarkContext } from "../../../MyContext/ThemeContextProvider";
 import Button from "../../Buttons/Button";
 import UserDropdown from "./UserDropdown";
 
 const NavButtons = ({ expandBtnClick }) => {
    const [expandProfile, setExpandProfile] = useState(false);
    const { user } = useContext(AuthContext);
+   const { isDark, setIsDark } = useContext(DarkContext);
 
    // Toggle user profile dropdown
    const handleProfileExpand = () => {
       setExpandProfile(!expandProfile);
    };
-
    return (
-      <div className="flex relative gap-4 md:gap-0 md:order-2">
-         <div className="hidden lg:block">
-            <Button to="/add-product" btnText="Add Product">
-               <svg
-                  className="w-4 h-4"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 20">
-                  <path
-                     stroke="currentColor"
-                     strokeLinecap="round"
-                     strokeLinejoin="round"
-                     strokeWidth="2"
-                     d="M10 5.757v8.486M5.757 10h8.486M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  />
-               </svg>
-            </Button>
+      <div className="flex items-center relative gap-4 md:gap-0 md:order-2">
+         <DarkModeToggle
+            className="mr-4"
+            onChange={setIsDark}
+            checked={isDark}
+         />
+         <div className="hidden lg:block ml-4">
+            <Button to="/add-product" btnText="Add Product"></Button>
          </div>
 
          {user && (

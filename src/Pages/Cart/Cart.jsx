@@ -53,8 +53,10 @@ const Cart = () => {
    return (
       <>
          <SiteTitle>Cart</SiteTitle>
-         <div className="h-screen bg-gray-100 pt-20 px-4 md:px-6 lg:px-10">
-            <h1 className="mb-10 text-center text-2xl font-bold">Cart Items</h1>
+         <div className="h-screen bg-gray-100 dark:bg-black pt-20 px-4 md:px-6 lg:px-10">
+            <h1 className="mb-10 text-center text-2xl font-bold dark:text-gray-200">
+               Cart Items
+            </h1>
             <div className="mx-auto justify-center px-6 md:flex md:space-x-6 xl:px-0">
                {cartItems.length ? (
                   <div className="rounded-lg md:w-2/3">

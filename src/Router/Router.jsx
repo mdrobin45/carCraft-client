@@ -4,6 +4,7 @@ import Login from "../Pages/Authentication/Login/Login";
 import Register from "../Pages/Authentication/Register/Register";
 import BrandArchive from "../Pages/BrandArchive/BrandArchive";
 import Cart from "../Pages/Cart/Cart";
+import Contact from "../Pages/Contact/Contact";
 import Home from "../Pages/Home/Home";
 import PageNotFound from "../Pages/PageNotFound/PageNotFound";
 import SingleProduct from "../Pages/SingleProduct/SingleProduct";
@@ -20,6 +21,14 @@ const router = createBrowserRouter([
          {
             path: "/",
             element: <Home />,
+         },
+         {
+            path: "/about",
+            element: <Home />,
+         },
+         {
+            path: "/contact",
+            element: <Contact />,
          },
          {
             path: "/login",

@@ -44,38 +44,10 @@ const Banner = () => {
                   shaping the future of business together
                </p>
                <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start">
-                  <Button to="/" btnText="About More" iconPosition="right">
-                     <svg
-                        className="w-4 h-4"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 14 10">
-                        <path
-                           stroke="currentColor"
-                           strokeLinecap="round"
-                           strokeLinejoin="round"
-                           strokeWidth="2"
-                           d="M1 5h12m0 0L9 1m4 4L9 9"
-                        />
-                     </svg>
-                  </Button>
-                  <Button to="/" btnText="Read More" iconPosition="right">
-                     <svg
-                        className="w-4 h-4"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 14 10">
-                        <path
-                           stroke="currentColor"
-                           strokeLinecap="round"
-                           strokeLinejoin="round"
-                           strokeWidth="2"
-                           d="M1 5h12m0 0L9 1m4 4L9 9"
-                        />
-                     </svg>
-                  </Button>
+                  <Button
+                     to="/about"
+                     btnText="Read More"
+                     iconPosition="right"></Button>
                </div>
             </div>
 

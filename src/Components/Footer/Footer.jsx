@@ -1,17 +1,20 @@
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { BsEnvelopeFill } from "react-icons/bs";
 import { FiMapPin } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import whiteLogo from "../../assets/images/white-logo.svg";
 
 const Footer = () => {
    return (
       <section className="bg-black py-20">
-         <div className="flex justify-between px-4 md:px-6 lg:px-10">
-            <div className=" w-1/3">
-               <img
-                  className="w-44"
-                  src="https://live.themewild.com/motex/assets/img/logo/logo-light.png"
-                  alt=""
-               />
+         <div className="flex flex-col md:flex-row justify-between px-4 md:px-6 lg:px-10">
+            <div className=" md:w-1/3">
+               <Link to="/" className="flex items-center">
+                  <img className="w-16" src={whiteLogo} alt="Logo" />
+                  <h2 className="text-4xl text-white font-bol">
+                     Car<span className="text-primary">C</span>raft
+                  </h2>
+               </Link>
                <p className="text-white py-4">
                   We are many variations of passages available but the majority
                   have suffered alteration in some form by injected humour words
@@ -32,83 +35,34 @@ const Footer = () => {
                   </li>
                </ul>
             </div>
-            <div className="w-1/3 flex justify-evenly">
+            <div className="md:w-1/3 pt-6 md:pt-0  flex md:justify-evenly">
                <div>
-                  <h2 className="mb-6 font-inter text-md font-semibold text-white dark:text-white">
+                  <h2 className="mb-6 font-inter text-2xl md:text-md font-semibold text-primary dark:text-white">
                      Quick Links
                   </h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <ul className="text-gray-100 dark:text-gray-400 font-medium">
                      <li className="mb-2">
-                        <a
-                           href="https://flowbite.com/"
-                           className="hover:underline">
+                        <Link to="/home" className="hover:underline">
                            Home
-                        </a>
+                        </Link>
                      </li>
                      <li>
-                        <a
-                           href="https://tailwindcss.com/"
-                           className="hover:underline">
+                        <Link to="/about" className="hover:underline">
                            About
-                        </a>
+                        </Link>
                      </li>
                      <li>
-                        <a
-                           href="https://tailwindcss.com/"
-                           className="hover:underline">
-                           Contact Us
-                        </a>
-                     </li>
-                     <li>
-                        <a
-                           href="https://tailwindcss.com/"
-                           className="hover:underline">
-                           Cars
-                        </a>
+                        <Link to="/contact" className="hover:underline">
+                           Contact
+                        </Link>
                      </li>
                   </ul>
                </div>
             </div>
-            <div className="w-1/3 flex justify-evenly">
+
+            <div className="md:w-1/3 pt-6 md:pt-0 flex md:justify-evenly">
                <div>
-                  <h2 className="mb-6 font-inter text-md font-semibold text-white dark:text-white">
-                     Supports
-                  </h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                     <li className="mb-2">
-                        <a
-                           href="https://flowbite.com/"
-                           className="hover:underline">
-                           Home
-                        </a>
-                     </li>
-                     <li>
-                        <a
-                           href="https://tailwindcss.com/"
-                           className="hover:underline">
-                           About
-                        </a>
-                     </li>
-                     <li>
-                        <a
-                           href="https://tailwindcss.com/"
-                           className="hover:underline">
-                           Contact Us
-                        </a>
-                     </li>
-                     <li>
-                        <a
-                           href="https://tailwindcss.com/"
-                           className="hover:underline">
-                           Cars
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-            <div className="w-1/3 flex justify-evenly">
-               <div>
-                  <h2 className="mb-6 font-inter text-md font-semibold text-white dark:text-white">
+                  <h2 className="mb-6 font-inter text-2xl md:text-md font-semibold text-primary dark:text-white">
                      Newsletter
                   </h2>
                   <p className="text-white">

@@ -13,7 +13,7 @@ const SectionHeader = ({ title, subTitle, highlight }) => {
             data-aos="fade-up"
             data-aos-delay="200"
             data-aos-duration="800"
-            className="text-3xl text-center md:text-left md:text-3xl lg:text-4xl font-bold font-inter uppercase">
+            className="text-3xl text-center md:text-left dark:text-gray-200 md:text-3xl lg:text-4xl font-bold font-inter uppercase">
             {title} <span className="text-primary">{highlight}</span>
          </h2>
       </div>

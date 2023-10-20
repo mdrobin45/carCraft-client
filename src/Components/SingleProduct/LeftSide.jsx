@@ -68,9 +68,9 @@ const LeftSide = ({ car }) => {
    };
    return (
       <div className="lg:w-2/3 mx-auto my-20">
-         <div className="my-4 bg-white p-4 rounded-md">
+         <div className="my-4 bg-white dark:bg-gray-700 p-4 rounded-md">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-               <h2 className="text-3xl md:text-4xl py-3 font-bold font-inter">
+               <h2 className="text-3xl dark:text-gray-200 md:text-4xl py-3 font-bold font-inter">
                   {name}
                </h2>
                <button
@@ -79,14 +79,14 @@ const LeftSide = ({ car }) => {
                   Add to Card
                </button>
             </div>
-            <h2 className="text-2xl font-bold text-primary pb-2">
+            <h2 className="text-2xl dark:text-gray-200 font-bold text-primary pb-2">
                Price: ${price}
             </h2>
             <img className="w-full rounded-md" src={photo} alt="Car" />
          </div>
 
-         <div className="p-4 mt-6 bg-white rounded-md px-4 md:px-6 lg:px-10">
-            <h2 className="text-2xl py-3 font-bold font-inter">
+         <div className="p-4 mt-6 bg-white dark:bg-gray-700 rounded-md px-4 md:px-6 lg:px-10">
+            <h2 className="text-2xl dark:text-gray-200 py-3 font-bold font-inter">
                Key Information
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -100,9 +100,11 @@ const LeftSide = ({ car }) => {
                <KeyInfo title="Color" text={color} />
             </div>
          </div>
-         <div className="p-4 mt-6 bg-white shadow-md rounded-md px-4 md:px-6 lg:px-10">
-            <h2 className="text-2xl py-3 font-bold font-inter">Description</h2>
-            <p>{description}</p>
+         <div className="p-4 mt-6 bg-white dark:bg-gray-700 shadow-md rounded-md px-4 md:px-6 lg:px-10">
+            <h2 className="text-2xl dark:text-gray-200 py-3 font-bold font-inter">
+               Description
+            </h2>
+            <p className="dark:text-gray-200">{description}</p>
          </div>
       </div>
    );

@@ -93,7 +93,7 @@ const UpdateProduct = () => {
          <SiteTitle>Update Product</SiteTitle>
          <PageHeader title="Update Product" />
          <div className="px-4 md:px-6 lg:px-10">
-            <h2 className="text-4xl pt-32 font-bold font-inter text-center">
+            <h2 className="text-4xl dark:text-gray-200 pt-32 font-bold font-inter text-center">
                Update Product
             </h2>
             <form
@@ -357,7 +357,7 @@ const UpdateProduct = () => {
                   name="description"
                   id="message"
                   rows="4"
-                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 "
+                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 dark:text-gray-200 dark:bg-gray-700 rounded-lg border border-gray-300 "
                   placeholder="Write here..."></textarea>
 
                <input
