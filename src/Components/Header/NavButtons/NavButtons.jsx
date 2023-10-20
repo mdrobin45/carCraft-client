@@ -14,22 +14,25 @@ const NavButtons = ({ expandBtnClick }) => {
 
    return (
       <div className="flex relative gap-4 md:gap-0 md:order-2">
-         <Button to="/add-product" btnText="Add Product">
-            <svg
-               className="w-4 h-4"
-               aria-hidden="true"
-               xmlns="http://www.w3.org/2000/svg"
-               fill="none"
-               viewBox="0 0 20 20">
-               <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M10 5.757v8.486M5.757 10h8.486M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-               />
-            </svg>
-         </Button>
+         <div className="hidden lg:block">
+            <Button to="/add-product" btnText="Add Product">
+               <svg
+                  className="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20">
+                  <path
+                     stroke="currentColor"
+                     strokeLinecap="round"
+                     strokeLinejoin="round"
+                     strokeWidth="2"
+                     d="M10 5.757v8.486M5.757 10h8.486M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+               </svg>
+            </Button>
+         </div>
+
          {user && (
             <>
                <img

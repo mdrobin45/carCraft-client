@@ -94,7 +94,7 @@ const ProductCard = ({ car }) => {
             <h4 className="block pt-2 font-barlow text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                {name}
             </h4>
-            <div className="grid pb-2 grid-cols-1 my-3 md:grid-cols-3 gap-3">
+            <div className="grid pb-2 grid-cols-2 my-3 md:grid-cols-3 gap-3">
                <p className="flex items-center gap-2 text-sm">
                   <BsCarFront className="text-primary text-md" />
                   {brandName}

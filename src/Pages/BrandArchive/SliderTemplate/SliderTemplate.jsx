@@ -10,13 +10,20 @@ const SliderTemplate = ({ ads }) => {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
          }}>
-         <div className="flex pb-0 md:pb-10 flex-col-reverse lg:flex-row lg:h-[85vh] pt-20 px-4 md:px-6 lg:px-10 items-center justify-between">
+         <div className="flex pb-10 flex-col-reverse lg:flex-row lg:h-[85vh] pt-20 px-4 md:px-6 lg:px-10 items-center justify-between">
             <div className="w-full lg:w-2/4 md:pt-10 lg:pt-0 text-center lg:text-left">
                <h1
                   style={{ lineHeight: "4.5rem" }}
                   data-aos="fade-in"
                   data-aos-duration="800"
-                  className="text-white pt-4 text-3xl md:text-4xl lg:text-6xl font-bold font-inter">
+                  className="text-white hidden md:block md:pt-4 text-3xl md:text-4xl lg:text-6xl font-bold font-inter">
+                  Get <span className="text-primary">{discount}%</span> Off{" "}
+                  {carModel}!
+               </h1>
+               <h1
+                  data-aos="fade-in"
+                  data-aos-duration="800"
+                  className="text-white md:hidden md:pt-4 text-3xl md:text-4xl lg:text-6xl font-bold font-inter">
                   Get <span className="text-primary">{discount}%</span> Off{" "}
                   {carModel}!
                </h1>

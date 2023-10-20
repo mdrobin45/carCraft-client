@@ -11,7 +11,7 @@ const Header = () => {
       setExpandMobileMenu(!expandMobileMenu);
    };
    return (
-      <nav className="pt-3 px-4 md:px-6 lg:px-10 py-4 w-full z-20 top-0 left-0">
+      <nav className="pt-3 hidden md:block px-4 md:px-6 lg:px-10 py-4 w-full z-20 top-0 left-0">
          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <div className="flex items-center gap-20">
                <Logo />

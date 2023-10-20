@@ -3,14 +3,14 @@ import { BsFillCarFrontFill } from "react-icons/bs";
 
 const About = () => {
    return (
-      <div className="flex py-20 flex-col md:flex-row items-center justify-between gap-20 px-4 md:px-6 lg:px-10">
-         <div className="w-2/4">
+      <div className="flex pt-10 md:pt-0 md:py-20 flex-col md:flex-row items-center justify-between gap-20 px-4 md:px-6 lg:px-10">
+         <div className="md:w-2/4">
             <img
                src="https://live.themewild.com/motex/assets/img/about/01.png"
                alt=""
             />
          </div>
-         <div className="w-2/4">
+         <div className="md:w-2/4">
             <h3
                data-aos="fade-up"
                data-aos-duration="800"
