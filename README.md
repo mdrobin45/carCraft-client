@@ -1,8 +1,27 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Website Overview
+Car craft is a car brand website. Where people can buy and sell their popular brand car.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Features & Functionality
+- Secure Login & Register
+- Add, update and delete car
+- Save car in their cart
+- Dark mode facility
+- Every personal page is protected. No one can access protected page without login
+
+
+## Data Reference
+#### Server API
+```http
+https://car-craft-server-jhidqthp1-robin45r.vercel.app
+```
+
+
+
+
+## Live Link
+
+https://carcraft-c1a4d.web.app/
+
