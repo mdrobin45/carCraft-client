@@ -22,7 +22,6 @@ const Root = () => {
             exit={{ opacity: 0 }}>
             <Outlet />
          </motion.div>
-
          <Footer />
       </div>
    );

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { AiOutlineBgColors } from "react-icons/ai";
 import { BiTransferAlt } from "react-icons/bi";
@@ -29,7 +30,12 @@ const ProductCard = ({ car }) => {
    }, [brand]);
 
    return (
-      <div className="relative flex w-full md:max-w-[24rem] flex-col rounded-xl bg-white p-2 dark:bg-gray-700 bg-clip-border text-gray-700 shadow-md">
+      <motion.div
+         initial={{ opacity: 0, marginLeft: "20px" }}
+         whileInView={{ opacity: 1, marginLeft: "0" }}
+         transition={{ duration: 0.5 }}
+         viewport={{ once: true }}
+         className="relative flex w-full md:max-w-[24rem] flex-col rounded-xl bg-white p-2 dark:bg-gray-700 bg-clip-border text-gray-700 shadow-md">
          <div className="relative m-0 overflow-hidden rounded-md bg-transparent bg-clip-border text-gray-700 shadow-none">
             <img
                className=" hover:scale-[1.1] transition-all"
@@ -131,7 +137,7 @@ const ProductCard = ({ car }) => {
                Update
             </Link>
          </div>
-      </div>
+      </motion.div>
    );
 };
 

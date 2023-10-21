@@ -23,7 +23,12 @@ const PopularBrands = () => {
                subTitle="POPULAR BRANDS"
             />
             {brands.length ? (
-               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 pt-10 pb-20">
+               <motion.div
+                  initial={{ opacity: 0, marginLeft: "20px" }}
+                  whileInView={{ opacity: 1, marginLeft: "0" }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 pt-10 pb-20">
                   {brands.map((brand) => (
                      <Link to={`/brand-archive/${brand._id}`} key={brand._id}>
                         <motion.div
@@ -40,7 +45,7 @@ const PopularBrands = () => {
                         </motion.div>
                      </Link>
                   ))}
-               </div>
+               </motion.div>
             ) : (
                <div className="h-screen flex flex-col items-center justify-center">
                   <ClipLoader color="#EF1D26" />
