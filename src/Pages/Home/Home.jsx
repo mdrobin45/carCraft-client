@@ -1,5 +1,6 @@
 import About from "../../Components/Home/About/About";
 import Banner from "../../Components/Home/Banner/Banner";
+import LatestCar from "../../Components/Home/LatesCar/LatestCar";
 import PopularBrands from "../../Components/Home/PopularBrands/PopularBrands";
 import Success from "../../Components/Home/Success/Success";
 import SiteTitle from "../../SiteTitle/SiteTitle";
@@ -12,6 +13,7 @@ const Home = () => {
          <About />
          <Success />
          <PopularBrands />
+         <LatestCar />
       </div>
    );
 };

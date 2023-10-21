@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
@@ -25,7 +26,9 @@ const PopularBrands = () => {
                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 pt-10 pb-20">
                   {brands.map((brand) => (
                      <Link to={`/brand-archive/${brand._id}`} key={brand._id}>
-                        <div className="text-center bg-[#F9F9F9] dark:bg-gray-700 rounded-xl p-2">
+                        <motion.div
+                           whileHover={{ marginTop: "-10px" }}
+                           className="text-center bg-[#F9F9F9] dark:bg-gray-700 rounded-xl p-2">
                            <img
                               className=" w-40 mx-auto"
                               src={brand.image}
@@ -34,7 +37,7 @@ const PopularBrands = () => {
                            <h3 className="text-xl dark:text-gray-200 font-inter font-bold">
                               {brand.name}
                            </h3>
-                        </div>
+                        </motion.div>
                      </Link>
                   ))}
                </div>

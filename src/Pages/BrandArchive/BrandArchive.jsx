@@ -47,7 +47,7 @@ const BrandArchive = () => {
                         title="Brand Cars"
                         subTitle="Cars by Brand"
                      />
-                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                         {filteredCars.map((car) => (
                            <ProductCard key={car._id} car={car} />
                         ))}

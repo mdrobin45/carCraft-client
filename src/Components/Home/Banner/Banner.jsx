@@ -22,8 +22,6 @@ const Banner = () => {
                </div>
                <h1
                   style={{ lineHeight: "4.5rem" }}
-                  data-aos="fade-in"
-                  data-aos-duration="800"
                   className="text-white hidden md:block md:pt-4 text-3xl md:text-4xl lg:text-6xl font-bold font-inter">
                   Best Way To Find Your{" "}
                   <span className="text-primary">Dream</span> Car
